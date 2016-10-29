@@ -16,7 +16,7 @@
           <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.12/slideout.min.js"></script>
     <script>
       $(document).ready(function(){
         $('.testimonials-wrapper').slick({
@@ -69,6 +69,14 @@
         $("#map_canvas1").mouseleave(function () {
             $('#map_canvas1').addClass('scrolloff'); // set the pointer events to none when mouse leaves the map area
         });
+        var slideout = new Slideout({
+    'panel': document.getElementById('panel'),
+    'menu': document.getElementById('menu'),
+    'side': 'right'
+  });
+  document.querySelector('.toggle-button').addEventListener('click', function() {
+  slideout.toggle();
+});
         });
     </script>
   </body>

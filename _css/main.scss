@@ -3,7 +3,8 @@
 @import 'foundation-sites/scss/foundation';
 @import 'motion-ui/motion-ui';
      
- 
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Raleway');
+
 @include foundation-off-canvas;
 
 
@@ -52,8 +53,11 @@
 @include motion-ui-animations;
 
 @import 'settings';
+@import "components/slideout";  
 @import "components/slick";  
 @import "components/slick-theme";  
+@import "components/headerHero"; 
+@import "components/planavisit"; 
 @import "components/gallery"; 
 
  

@@ -5,6 +5,7 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Raleway");
 @import url("https://fonts.googleapis.com/css?family=Quando");
 .slide-in-down.mui-enter {
   transition-duration: 500ms;
@@ -4379,6 +4380,40 @@ table.hover tr:nth-of-type(even):hover {
 .long-delay {
   animation-delay: 700ms !important; }
 
+body {
+  width: 100%;
+  height: 100%; }
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #3E3937;
+  color: white;
+  z-index: 0;
+  width: 256px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none; }
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform; }
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden; }
+
+.slideout-open .slideout-menu {
+  display: block; }
+
+header {
+  display: flex;
+  justify-content: space-between; }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -4713,273 +4748,125 @@ table.hover tr:nth-of-type(even):hover {
       opacity: 0.75; }
 
 .header {
-  height: 80vh;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: url(http://sitesforchurch.s3.amazonaws.com/headerbackground.png) no-repeat center center;
-  background-size: cover;
-  color: #fefefe;
-  position: relative; }
-  @media screen and (min-width: 41.25em) {
-    .header {
-      height: 70vh;
-      padding-bottom: 40px; } }
-  .header .socialbar {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 20px;
-    right: 20px; }
-    .header .socialbar li {
-      margin-left: 30px; }
-      .header .socialbar li:first-child {
-        margin-left: none; }
-    .header .socialbar li a {
-      color: #fefefe;
-      font-size: 20px; }
-  .header img {
-    margin-top: 80px;
-    margin-bottom: 22px; }
-  .header h1 {
-    font-size: 36px;
-    font-weight: bold;
-    max-width: 80%;
-    text-align: center; }
-  .header p {
-    width: 80%;
-    text-align: center;
-    font-size: 18px; }
-    @media screen and (min-width: 40em) {
-      .header p {
-        width: 60%; } }
-  .header h3 {
-    margin-top: 30px;
-    margin-bottom: 30px; }
-  .header a.button.cta {
-    background: none;
-    border: 1px solid #fefefe;
-    border-radius: 4px; }
-  .header ul.menu {
-    text-align: center; }
-    .header ul.menu > li {
-      display: block; }
-    @media screen and (min-width: 40em) {
-      .header ul.menu > li {
-        display: table-cell; } }
-    .header ul.menu li a {
-      color: #fefefe;
-      font-size: 14px;
-      line-height: 14px; }
-
-.intro {
-  width: 90%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px; }
-  .intro h2 {
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 35px; }
-  .intro .find-sections {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: center; }
-  .intro .find-section {
-    max-width: 40%;
-    min-width: 200px;
-    text-align: center;
-    min-height: 420px;
-    margin-left: auto;
-    margin-right: auto; }
-    @media screen and (min-width: 40em) {
-      .intro .find-section {
-        max-width: 20%;
-        margin-bottom: 0; } }
-    .intro .find-section img {
-      width: 130px;
-      height: 130px;
-      border-radius: 400px;
-      border: 2px solid #0a0a0a;
-      text-align: center;
-      margin-bottom: 23px; }
-    .intro .find-section h3 {
-      font-size: 30px;
-      text-transform: uppercase;
-      font-weight: bold; }
-
-.testimonials {
-  background: #0a0a0a;
-  color: #fefefe;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.57);
   width: 100%;
-  min-height: 300px;
-  padding: 50px; }
-  .testimonials .testimonial p {
-    max-width: 520px;
+  z-index: 10;
+  height: 100px; }
+  @media screen and (min-width: 40em) {
+    .header {
+      height: 182px; } }
+  .header .wrapper {
+    width: 90%;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
-    font-size: 18px;
-    line-height: 25px;
-    margin-bottom: 23px; }
-  .testimonials .testimonial p.signature {
-    font-size: 24px;
-    margin-bottom: 0; }
-  .testimonials .testimonial img {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 300px;
-    width: 150px;
-    height: 150px;
-    margin-bottom: 25px;
-    border: 2px solid #cacaca; }
-
-.visit {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  padding: 30px; }
-  .visit h2 {
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 22px; }
-  .visit p.intro-text {
-    font-size: 18px;
-    line-height: 26px;
-    text-align: center;
-    margin-bottom: 36px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto; }
-  .visit .visit-section {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 27px;
-    flex-direction: column;
-    max-width: 830px;
-    margin-left: auto;
-    margin-right: auto; }
-    .visit .visit-section img {
-      height: 200px;
-      width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 27px; }
-    .visit .visit-section .text {
-      flex-grow: 2; }
-      .visit .visit-section .text h3 {
-        max-width: 570px;
-        font-size: 30px;
-        font-weight: bold;
-        margin-bottom: 22px; }
-      .visit .visit-section .text p {
-        max-width: 570px;
-        font-size: 14px;
-        line-height: 20px; }
+    align-items: center;
+    height: 100px; }
     @media screen and (min-width: 40em) {
-      .visit .visit-section {
-        flex-direction: row; }
-        .visit .visit-section img {
-          margin-right: 27px;
-          margin-bottom: 0; }
-        .visit .visit-section:nth-child(odd) img {
-          order: 2;
-          margin-right: 0;
-          margin-left: 27px; } }
+      .header .wrapper {
+        height: 182px; } }
+    .header .wrapper h1 img {
+      height: 85px; }
+      @media screen and (min-width: 40em) {
+        .header .wrapper h1 img {
+          height: 137px; } }
 
-.pastor {
-  background: #4A4A4A;
-  color: #fefefe;
-  padding: 50px;
-  text-align: center; }
-  .pastor h2 {
-    font-size: 36px;
-    line-height: 49px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 42px; }
-  .pastor img {
-    text-align: center;
-    max-width: 90%;
-    margin-bottom: 54px;
-    max-height: 400px; }
-  .pastor p {
-    max-width: 770px;
+.hero {
+  min-height: 800px;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fefefe; }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 55px;
+    margin-bottom: 25px; }
+    @media screen and (min-width: 40em) {
+      .hero h1 {
+        font-size: 64px;
+        line-height: 68px;
+        margin-bottom: 30px; } }
+  .hero h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 16px; }
+  .hero .main-heading {
     width: 90%;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto; }
-  .pastor ul.pastor-contact {
-    list-style-type: none;
+    @media screen and (min-width: 40em) {
+      .hero .main-heading {
+        margin-bottom: 80px; } }
+    .hero .main-heading p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      line-height: 28px;
+      max-width: 550px; }
+  .hero .hero-sections {
     display: flex;
     flex-direction: column;
-    align-items: center; }
-    .pastor ul.pastor-contact li {
-      font-size: 18px;
-      line-height: 30px;
-      padding-left: 42px;
-      margin-bottom: 10px;
-      text-align: left; }
-      .pastor ul.pastor-contact li.email {
-        background: url(http://sitesforchurch.s3.amazonaws.com/Mail.png) no-repeat center left; }
-      .pastor ul.pastor-contact li.phone {
-        background: url(http://sitesforchurch.s3.amazonaws.com/Contact-1.png) no-repeat center left; }
+    width: 90%;
+    margin: 0 auto; }
+    @media screen and (min-width: 40em) {
+      .hero .hero-sections {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto 120px auto; } }
+    @media screen and (min-width: 40em) {
+      .hero .hero-sections .section {
+        padding-right: 15px;
+        border-right: 1px solid #fefefe;
+        padding-left: 15px; }
+        .hero .hero-sections .section:first-child {
+          padding-left: 0; }
+        .hero .hero-sections .section:last-child {
+          border-right: none; } }
+    .hero .hero-sections .section p {
+      font-size: 16px;
+      line-height: 22px;
+      font-family: 'Raleway', sans-serif; }
 
-div.main {
-  display: flex;
-  max-width: 1200px;
+.plan-a-visit {
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
-  flex-direction: column;
-  padding: 30px; }
-  div.main h2, div.main h3, div.main h4, div.main h5 {
-    text-transform: uppercase; }
-  @media screen and (min-width: 53.125em) {
-    div.main {
-      flex-direction: row;
-      justify-content: space-between; } }
-  div.main div.services-info {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto; }
-    div.main div.services-info h2 {
-      font-size: 35px; }
-    div.main div.services-info h3 {
-      font-size: 22px; }
-    @media screen and (min-width: 53.125em) {
-      div.main div.services-info {
-        width: 57%; } }
-  div.main div.pastor-info {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto; }
-    @media screen and (min-width: 53.125em) {
-      div.main div.pastor-info {
-        width: 27%;
-        order: -1; } }
-    div.main div.pastor-info h3 {
-      font-size: 22px;
-      text-align: center; }
-    div.main div.pastor-info img {
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      margin-bottom: 20px;
-      border-radius: 50%;
-      border: 4px solid #2F3640; }
-    div.main div.pastor-info p.email {
-      text-align: center; }
-    div.main div.pastor-info p.email a {
-      color: #617B95; }
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  .plan-a-visit h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    font-weight: 44px;
+    font-weight: 900;
+    color: #716558; }
+  .plan-a-visit .section {
+    padding: 30px; }
+    .plan-a-visit .section h3 {
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      font-size: 27px;
+      line-height: 38px;
+      margin-bottom: 22px;
+      color: #716558; }
+    .plan-a-visit .section p, .plan-a-visit .section li {
+      font-weight: 400;
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      line-height: 28px;
+      color: #747E80; }
 
 .photos {
   background: #0a0a0a;
@@ -4990,110 +4877,3 @@ div.main {
     width: 100%; }
     .photos .photos-inner .photo a img {
       padding: 10px; }
-
-.events {
-  max-width: 1200px;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 40px; }
-  .events h2 {
-    margin-top: 20px;
-    font-size: 36px;
-    font-weight: bold;
-    padding-bottom: 27px;
-    border-bottom: 1px solid #0a0a0a; }
-  .events .featured-event {
-    padding-top: 22px;
-    padding-bottom: 22px;
-    display: flex;
-    flex-direction: column; }
-    @media screen and (min-width: 40em) {
-      .events .featured-event {
-        flex-direction: row; } }
-    .events .featured-event .image {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 25px; }
-      @media screen and (min-width: 40em) {
-        .events .featured-event .image {
-          width: 60%;
-          margin-right: 40px;
-          margin-bottom: 25px; } }
-    .events .featured-event .details {
-      width: 100%; }
-      @media screen and (min-width: 40em) {
-        .events .featured-event .details {
-          width: 35%;
-          min-width: 245px;
-          flex-grow: 2; } }
-      .events .featured-event .details h4 {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 13px; }
-        .events .featured-event .details h4 a {
-          color: #0a0a0a; }
-      .events .featured-event .details p.date {
-        border-top: 1px solid #979797;
-        font-size: 20px;
-        line-height: 27px;
-        margin-bottom: 0;
-        padding-top: 7px; }
-      .events .featured-event .details p.time {
-        border-bottom: 1px solid #979797;
-        font-size: 20px;
-        line-height: 27px;
-        margin-bottom: 0;
-        padding-bottom: 7px; }
-      .events .featured-event .details p.description {
-        font-size: 14px;
-        line-height: 20px;
-        margin-top: 10px; }
-      .events .featured-event .details a.read-more {
-        color: #0a0a0a;
-        font-size: 14px;
-        font-weight: bold;
-        text-decoration: underline; }
-  .events .single-event {
-    display: flex;
-    border-top: 1px solid #979797; }
-    .events .single-event .date-display {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 100px; }
-      .events .single-event .date-display p.number {
-        font-size: 30px;
-        margin-bottom: 0;
-        line-height: 30px;
-        font-weight: bold; }
-      .events .single-event .date-display p.month {
-        font-size: 20px;
-        margin-bottom: 0;
-        line-height: 30px;
-        font-weight: bold;
-        text-transform: uppercase; }
-    .events .single-event .event-info h4 {
-      font-weight: bold;
-      font-size: 22px;
-      margin: 21px 0 6px 0; }
-      .events .single-event .event-info h4 a {
-        color: #0a0a0a; }
-    .events .single-event .event-info p.date {
-      margin: 0;
-      font-size: 18px;
-      line-height: 18px; }
-    .events .single-event .event-info p.time {
-      margin: 0 0 21px 0;
-      font-size: 18px;
-      line-height: 18px; }
-
-div.contact {
-  max-width: 1200px;
-  padding: 40px;
-  margin-left: auto;
-  margin-right: auto; }
-  div.contact h2 {
-    font-size: 36px;
-    font-weight: bold; }
