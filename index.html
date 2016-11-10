@@ -76,4 +76,15 @@ layout: default
         </p>
       </div><!--/column-->
   </div><!--/plan-a-visit-->
+  <div class="photos">
+  <div class="photos-inner" id="sqr-gallery">
+  {% for img in site.data.images[0].Images  limit: 12 %}
+        <div class="photo"><a href="#" data-featherlight="{{img.url}}"><img src="{{img.thumbnails.large.url }}" alt=""></a></div>
+      {% endfor %}
+  </div><!--/photos-inner-->
+</div><!--/gallery-->
+<div class="pastor">
+  <img src="http://placehold.it/300x300" alt="">
+
+</div><!--/pastor-->
 </main>

@@ -4867,10 +4867,13 @@ header {
       font-size: 18px;
       line-height: 28px;
       color: #747E80; }
+    .plan-a-visit .section a {
+      color: #C56031; }
 
 .photos {
-  background: #0a0a0a;
-  padding: 10px 30px; }
+  background: #564C42;
+  padding: 10px 30px;
+  margin-top: 80px; }
   .photos .photos-inner {
     margin-left: auto;
     margin-right: auto;
