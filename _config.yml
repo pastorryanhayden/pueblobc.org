@@ -1,10 +1,8 @@
 # What's the name of the church?
-title: New Hebron Baptist Church
+title: Pueblo Baptist Church
 # Give a brief description of the church
 description: > # this means to ignore newlines until "baseurl:"
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus blanditiis odio corrupti, 
-    illum architecto consequuntur, quaerat unde repudiandae qui temporibus! Fuga maxime molestiae hic impedit 
-    sit sint perferendis rerum unde.
+    Pueblo Baptist Church is an independent Baptist church located in West Pueblo, Colorado.
 # Leave this alone
 baseurl: "" # the subpath of your site, e.g. /blog
 # Change this to the domain when you are finished and ready to publish.
