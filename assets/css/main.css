@@ -4392,7 +4392,7 @@ body {
   background: #3E3937;
   color: white;
   z-index: 0;
-  width: 256px;
+  width: 260px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: none; }
@@ -4753,7 +4753,7 @@ header {
   left: 0;
   background: rgba(255, 255, 255, 0.57);
   width: 100%;
-  z-index: 10;
+  z-index: 2;
   height: 100px; }
   @media screen and (min-width: 40em) {
     .header {
@@ -4777,20 +4777,27 @@ header {
           height: 137px; } }
 
 .hero {
-  min-height: 800px;
+  min-height: 900px;
   z-index: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  color: #fefefe; }
+  color: #fefefe;
+  padding-bottom: 40px; }
+  @media screen and (min-width: 40em) {
+    .hero {
+      padding-bottom: 0;
+      min-height: 800px; } }
   .hero h1 {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
     font-size: 45px;
     line-height: 55px;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    padding-top: 40px; }
     @media screen and (min-width: 40em) {
       .hero h1 {
+        padding-top: 0;
         font-size: 64px;
         line-height: 68px;
         margin-bottom: 30px; } }
@@ -4838,6 +4845,71 @@ header {
       line-height: 22px;
       font-family: 'Raleway', sans-serif; }
 
+.menulogo {
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #564D42;
+  border-bottom: 1px solid #979797; }
+
+.menucontactinfo {
+  padding: 20px 40px;
+  background: #3D362F;
+  border-bottom: 1px solid #979797; }
+  .menucontactinfo h4 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase; }
+  .menucontactinfo h5 {
+    font-size: 15px;
+    line-height: 25px;
+    font-family: 'Playfair Display', serif; }
+  .menucontactinfo p {
+    font-size: 15px;
+    line-height: 25px;
+    color: #E8E4DB;
+    font-family: 'Raleway', sans-serif; }
+
+.menuservices {
+  padding: 20px 40px;
+  background: #3D362F;
+  border-bottom: 1px solid #979797; }
+  .menuservices h4 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase; }
+  .menuservices h5 {
+    font-size: 15px;
+    line-height: 25px;
+    font-family: 'Playfair Display', serif; }
+  .menuservices p {
+    font-size: 15px;
+    line-height: 25px;
+    color: #E8E4DB;
+    font-family: 'Raleway', sans-serif; }
+
+ul.side-menu {
+  background: #564D42;
+  list-style-type: none;
+  margin-left: 0; }
+  ul.side-menu li {
+    line-height: 64px;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    border-bottom: 1px solid #979797;
+    color: #CDC9C8; }
+    ul.side-menu li:hover {
+      background: #352F2A; }
+    ul.side-menu li a {
+      color: #CDC9C8;
+      padding-left: 30px; }
+  ul.side-menu li.sub a {
+    padding-left: 50px; }
+
 .plan-a-visit {
   width: 90%;
   margin-left: auto;
@@ -4851,7 +4923,7 @@ header {
     margin-bottom: 50px;
     width: 100%;
     font-family: 'Playfair Display', serif;
-    font-weight: 44px;
+    font-size: 44px;
     font-weight: 900;
     color: #716558; }
   .plan-a-visit .section {
@@ -4882,7 +4954,8 @@ header {
   .meet-pastor img {
     border-radius: 600px;
     margin-bottom: 36px;
-    text-align: center; }
+    text-align: center;
+    max-width: 35%; }
   .meet-pastor h2 {
     font-size: 44px;
     font-weight: 900;
@@ -4890,18 +4963,113 @@ header {
     margin-bottom: 24px;
     text-align: center; }
   .meet-pastor p {
-    max-width: 575px;
+    max-width: 80%;
     font-size: 18px;
     line-height: 28px;
     font-family: 'Playfair Display', serif;
     color: #747E80;
     margin-bottom: 28px;
     text-align: center; }
+    @media screen and (min-width: 40em) {
+      .meet-pastor p {
+        max-width: 575px; } }
+  .meet-pastor ul.social-menu {
+    width: 300px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+    list-style-type: none; }
+    .meet-pastor ul.social-menu li {
+      width: 40px;
+      line-height: 40px;
+      height: 40px;
+      padding: 0;
+      flex-shrink: 0;
+      margin: 0; }
+      .meet-pastor ul.social-menu li a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px; }
+        .meet-pastor ul.social-menu li a img {
+          max-width: 100%;
+          border-radius: 0;
+          margin: 0;
+          width: 40px;
+          height: 40px;
+          text-align: center; }
+
+.map {
+  height: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (min-width: 40em) {
+    .map {
+      justify-content: flex-end;
+      align-items: flex-end; } }
+  .map a.button.large {
+    background: #4C443A;
+    margin-bottom: 0;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase; }
+
+.footer {
+  width: 100%;
+  min-height: 297px;
+  background: #716558;
+  color: #E8E4DB;
+  padding: 40px;
+  border-bottom: 1px solid #E8E4DB; }
+  .footer .text {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
+  .footer h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 37px;
+    font-family: 'Playfair Display', serif; }
+  .footer h5 {
+    font-size: 15px;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 6px; }
+  .footer p {
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 25px;
+    color: #E8E4DB;
+    font-family: 'Raleway', sans-serif; }
+
+.second-footer {
+  background: #716558;
+  color: #E8E4DB;
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+  flex-wrap: wrap;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: 'Raleway', sans-serif; }
+  .second-footer ul.menu {
+    max-width: 1200px;
+    min-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 2; }
+    .second-footer ul.menu li a {
+      color: #E8E4DB; }
+  .second-footer p.copyright {
+    margin-bottom: 0; }
+    .second-footer p.copyright a {
+      color: #E8E4DB; }
 
 .photos {
   background: #564D42;
   padding: 10px 30px;
-  margin-top: 80px; }
+  margin-top: 80px;
+  width: 100%; }
   .photos .photos-inner {
     margin-left: auto;
     margin-right: auto;

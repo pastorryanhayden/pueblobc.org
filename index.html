@@ -2,96 +2,67 @@
 layout: default
 ---
 <nav id="menu">
-  <header>
-    <h2>Menu</h2>
-  </header>
+    {% include menu.html %}
 </nav>
 <main id="panel">
   <div class="header">
     <div class="wrapper">
-    <h1><img src="http://sitesforchurch.s3.amazonaws.com/pueblologo.png" alt="Pueblo Baptist Church"></h1>
+    <h1><img src="{{site.data.welcome[0].logo[0].url}}" alt="Pueblo Baptist Church"></h1>
     <a href="#" class="toggle-button"><img src="http://sitesforchurch.s3.amazonaws.com/Menu.png" alt="Menu" width="45" height="45px"></a>
     </div><!--/wrapper-->
   </div><!--/header-->
-  <div class="hero" style="background: url(http://sitesforchurch.s3.amazonaws.com/PuebloBackground.png) no-repeat center center; background-size: cover;">
+  <div class="hero" style="background: url({{site.data.welcome[0].main_image[0].url}}) no-repeat center center; background-size: cover;">
       <div class="main-heading">
-      <h1>Still Church</h1>
-      <p>If you yearn for the days when church was still church, you’ll love Pueblo Baptist.  We are Pueblo Colorado’s home for those who want church to be more timeless than trendy. </p>
+      <h1>{{site.data.welcome[0].main_heading}}</h1>
+      {{site.data.welcome[0].welcome_message | markdownify }}
       </div><!--/main-heading-->
       <div class="hero-sections">
           <div class="section">
-              <h3>Still Preaching</h3>
-              <p>At Pueblo Baptist, we still believe in good old-fashioned Bible preaching.  Every Sunday, Sunday Night and Wednesday our pastor opens the word of God and preaches the Truth.</p>
+              <h3>{{site.data.welcome[0].Message_1_title}}</h3>
+              {{site.data.welcome[0].Message_1_text | markdownify }}
           </div><!--/section-->
           <div class="section">
-              <h3>Still Soulwinning</h3>
-              <p>At Pueblo Baptist, we still believe that the gospel of Jesus Christ saves people and we are committed to doing our part in fulfilling the great commission. (Matthew 28:19-20)</p>
+              <h3>{{site.data.welcome[0].Message_2_title}}</h3>
+              {{site.data.welcome[0].Message_2_text | markdownify }}
           </div><!--/section-->
           <div class="section">
-              <h3>Still Caring</h3>
-              <p>At Pueblo Baptist, we care about you.  We still believe God loves the whole world and wants us to show you His love.</p>
+              <h3>{{site.data.welcome[0].Message_3_title}}</h3>
+              {{site.data.welcome[0].Message_3_text | markdownify }}
           </div><!--/section-->
       </div><!--/hero-sections-->
   </div><!--/hero-->
   <div class="plan-a-visit">
     <h2>Plan A Visit</h2>
     <div class="row small-up-1 medium-up-2 visit-sections">
+      {% for item in site.data.visit %}
       <div class="column section">
-        <h3>What are your services like?</h3>
-        <p>After a time of fellowship, we start our services with prayer and then sing some congregational hymns.  We take up an offering (visitors aren’t expected to give) and then the pastor or a special speaker reads a portion of scripture and preaches a message.</p>
+        <h3>{{item.Heading}}</h3>
+        {{ item.Text | markdownify }}
       </div><!--/column-->
-      <div class="column section">
-        <h3>What are your services like?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, impedit, iste quos veniam maiores quidem repudiandae nihil. Veniam quae alias aliquam pariatur impedit maiores corrupti. Earum, minus temporibus quasi nisi reiciendis pariatur iste sequi quaerat iusto, repellendus doloremque aperiam consequatur.</p>
-      </div><!--/column-->
-      <div class="column section">
-        <h3>Where do you meet?</h3>
-        <p>Our building is located at 63 E Spaulding Avenue near where it intersects with McCulluch Blvd in Pueblo West . (Across from Covenant Reformed Presbyterian Church.).</p>
-      </div><!--/column-->
-      <div class="column section">
-        <h3>Do you have anything for the kids?</h3>
-        <p>We provide the following for children: </p>
-        <ul>
-          <li>A Sunday school service for elementary aged kids.</li>
-          <li>Occasional youth activities for teenagers.</li>
-          <li>Wednesday evening children service at 6 PM</li>
-        </ul>
-      </div><!--/column-->
-      <div class="column section">
-        <h3>What do you believe?</h3>
-        <p>We believe what baptist people have always believed including the inspiration and inerrancy of scripture, the trinity of the godhead, the virgin Birth of Christ, salvation by grace through Faith in Christ’s finished work, the premillennial return of Christ, etc.</p>
-        <p><a href="#">Click here to download our full statement of faith.
-</a></p>
-      </div><!--/column-->
-      <div class="column section">
-        <h3>When do you meet?</h3>
-        <p><strong>Sundays</strong><br>
-        Sunday School - 10:00AM<br>
-        Morning Service - 11:00AM<br>
-        Evening Service - 6:00 PM<br>
-        <br>
-
-      <strong>Wednesdays</strong><br>
-      Bible Study & Prayer Meeting - 7:00 PM
-        </p>
-      </div><!--/column-->
+      {% endfor %}
+      
+    </div><!--/row small-up etc.-->
   </div><!--/plan-a-visit-->
   <div class="photos">
   <div class="photos-inner" id="sqr-gallery">
-  {% for img in site.data.images[0].Images  limit: 12 %}
-        <div class="photo"><a href="#" data-featherlight="{{img.url}}"><img src="{{img.thumbnails.large.url }}" alt=""></a></div>
+  {% for img in site.data.images limit: 12 %}
+        <div class="photo"><a href="#" data-featherlight="{{img.Full_Image}}"><img src="{{img.Thumbnail }}" alt=""></a></div>
       {% endfor %}
   </div><!--/photos-inner-->
 </div><!--/gallery-->
 <div class="meet-pastor">
-  <img src="http://placehold.it/300x300" alt="">
-  <h2>Our Pastor: Ron Oster</h2>
-  <p>Pastor Ron Oster first heard the gospel while his father was serving in the Air Force.  After trusting Christ, he attended Bible Baptist Church where he was discipled and grew in the faith.  In 1989 he felt the call to preach and began preparing for ministry.   He attended Heartland Baptist Bible College in Oklahoma City graduating with a Pastoral major. He had served as a Youth Pastor and Assistant Pastor in other Baptist churches. In 2007 to 2008 he was deployed to Iraq as a MP in the Army National Gaurd. In December 2011 he answered the call to pastor Pueblo Baptist Church.</p>
-  <p>Pastor Oster is joined in the ministry by his wife Norma and their children: Child1, Child2, Child3 and Child4.</p>
-  <ul>
-    <li><a href="#">Facebook</a></li>
-    <li><a href="#">Twitter</a></li>
-    <li><a href="#">Instagram</a></li>
+  <img src="{{ site.data.pastor[0].Pastor_thumbnail[0].url }}" alt="">
+  <h2>{{site.data.pastor[0].Pastor_heading}}</h2>
+  {{ site.data.pastor[0].Pastor_content | markdownify }}
+  <ul class="social-menu">
+    {% if  site.data.pastor[0].Pastor_twitter %}
+    <li><a href="{{site.data.pastor[0].Pastor_twitter}}"><img src="http://sitesforchurch.s3.amazonaws.com/twitter.png" alt=""/></a></li>{% endif %}
+    {% if  site.data.pastor[0].Pastor_facebook %}
+    <li><a href="{{ site.data.pastor[0].Pastor_facebook }}"><img src="http://sitesforchurch.s3.amazonaws.com/facebook.png" alt=""/></a></li>{% endif %}
+    {% if  site.data.pastor[0].Pastor_email %}
+    <li><a href="{{site.data.pastor[0].Pastor_email}}"><img src="http://sitesforchurch.s3.amazonaws.com/email-1.png" alt=""/></a></li>{% endif %}
   </ul>   
 </div><!--/Meet-pastor-->
+{{ site.data.contact[0].Google_Maps_Embed }}
+{% include footer.html %}
 </main>

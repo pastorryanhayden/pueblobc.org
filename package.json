@@ -23,6 +23,7 @@
     "browser-sync": "latest",
     "browserify": "latest",
     "expect.js": "latest",
+    "googleapis": "^14.2.0",
     "jscs": "latest",
     "jshint": "latest",
     "jsonfile": "^2.3.1",
