@@ -13,8 +13,8 @@
   </div><!--/image-->
     <div class="details">
       <h4><a href="#">{{event.Name}}</a></h4>
-      <p class="date"><strong>Date:</strong> {{event.Date | date: "%A, %B %-d"}}</p>
-      <p class="time"><strong>Time:</strong> {{event.Date | date: "%I:%M %p"}}</p>
+      <p class="date"><strong>Date:</strong> {{event.Date_Local | date: "%A, %B %-d"}}</p>
+      <p class="time"><strong>Time:</strong> {{event.Date_Local | date: "%I:%M %p"}}</p>
       <p class="description">
         {{event.Description}}
       </p>
@@ -25,13 +25,13 @@
   {% for event in site.data.events %}
   <div class="single-event">
       <div class="date-display">
-        <p class="number">{{event.Date | date: "%d"}}</p>
-        <p class="month">{{event.Date | date: "%b"}}</p>
+        <p class="number">{{event.Date_Local | date: "%d"}}</p>
+        <p class="month">{{event.Date_Local | date: "%b"}}</p>
       </div><!--/date-display-->
       <div class="event-info">
         <h4><a href="#">{{event.Name}}</a></h4>
-        <p class="date"><strong>Date:</strong> {{event.Date | date: "%A, %B %-d"}}</p>
-        <p class="time"><strong>Time:</strong> {{event.Date | date: "%I:%M %p"}}</p>
+        <p class="date"><strong>Date:</strong> {{event.Date_Local | date: "%A, %B %-d"}}</p>
+        <p class="time"><strong>Time:</strong> {{event.Date_Local | date: "%I:%M %p"}}</p>
       </div><!--/event-info-->
   </div><!--/single-event-->
   {% endfor %}
