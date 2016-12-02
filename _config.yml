@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 # Change this to the domain when you are finished and ready to publish.
 
-url: "http://sitesfor.church/pueblo/" # the base hostname & protocol for your site | Switch to http://cranesvillebiblechurch.com/" Before running Glynn.  Afterwards change it back to http://localhost:4000/
+url: "http://pueblobaptist.org/" # the base hostname & protocol for your site | Switch to http://cranesvillebiblechurch.com/" Before running Glynn.  Afterwards change it back to http://localhost:4000/
 
 
 
@@ -35,7 +35,7 @@ keep_files:
 
 
 ftp_host: 'biblebaptistmattoon.org'
-ftp_dir: 'sitesfor.church/pueblo/'
+ftp_dir: 'pueblobaptist.org/'
 ftp_passive: false
 ftp_username: 'ryahay11'
 ftp_password: '@88Volvocj'
