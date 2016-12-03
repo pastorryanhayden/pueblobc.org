@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<div class="event-page">
+    <nav id="menu">
+    {% include menu.html %}
+</nav>
+<main id="panel">
+  <div class="header">
+    <div class="wrapper">
+    <h1><img src="{{site.data.welcome[0].logo[0].url}}" alt="Pueblo Baptist Church"></h1>
+    <a href="#" class="toggle-button"><img src="http://sitesforchurch.s3.amazonaws.com/Menu.png" alt="Menu" width="45" height="45px"></a>
+    </div><!--/wrapper-->
+  </div><!--/header-->
+  <div class="hero" style="background: url({{site.data.welcome[0].main_image[0].url}}) no-repeat center center; background-size: cover; height: 354px;">
+      <h1><span>Upcoming Events: </span>{{page.Name}}</h1>
+</div><!--/hero-->
+<div class="event-content">
+<div class="featured-image">
+     {% if page.Featured_Image %}
+    <img src="{{page.Featured_Image[0].url}}" alt="">
+    {% else %}
+    <img src="http://sitesforchurch.s3.amazonaws.com/Pueblo%20Baptst%20Church.jpg" alt="">
+    {% endif %}
+</div><!--/featured-image-->
+<div class="event-header">
+    <h2>{{page.Name}}</h2>
+    <h3>{{page.Date_Local | date: "%A, %B %-d"}}</h3>
+    <h4>{{page.Date_Local | date: "%I:%M %p"}}</h4>
+</div><!--/event-header-->
+<div class="content">
+{{page.Content | markdownify }}
+</div><!--/content-->
+<div class="buttons">
+    <a href="{{site.url}}" class="button">Return to Home Page</a>
+    <a href="#" class="button">View All Events</a>
+</div><!--/buttons-->
+</div><!--/event-content-->
+</main>
+</div><!--/event-page-->

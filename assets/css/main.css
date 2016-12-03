@@ -5186,3 +5186,56 @@ ul.side-menu {
       font-size: 18px;
       line-height: 26px;
       font-family: 'Raleway', sans-serif; }
+
+.event-page .hero {
+  height: 354px;
+  min-height: 354px;
+  padding-bottom: 10px; }
+  .event-page .hero h1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 44px; }
+    .event-page .hero h1 span {
+      color: #CDC9C8; }
+
+.event-page .event-content {
+  max-width: 1100px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 45px;
+  text-align: center; }
+  .event-page .event-content .featured-image {
+    margin-bottom: 45px; }
+  .event-page .event-content .event-header {
+    margin-bottom: 45px; }
+    .event-page .event-content .event-header h2, .event-page .event-content .event-header h3, .event-page .event-content .event-header h4 {
+      font-family: 'Playfair Display', serif; }
+    .event-page .event-content .event-header h2 {
+      font-weight: 900;
+      font-size: 45px;
+      line-height: 55px;
+      color: #C56031; }
+    .event-page .event-content .event-header h3, .event-page .event-content .event-header h4 {
+      color: #716558; }
+  .event-page .event-content .content {
+    margin-bottom: 45px; }
+    .event-page .event-content .content p {
+      font-family: 'Raleway', sans-serif;
+      font-size: 20px;
+      line-height: 35px;
+      color: #747E80; }
+  .event-page .event-content .buttons {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .event-page .event-content .buttons .button {
+      background: none;
+      color: #C56031;
+      border: 1px solid #C56031;
+      border-radius: 20px;
+      font-family: 'Raleway', sans-serif; }

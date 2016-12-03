@@ -12,13 +12,13 @@
     {% endif %}
   </div><!--/image-->
     <div class="details">
-      <h4><a href="#">{{event.Name}}</a></h4>
+      <h4><a href="{{ event.Name | datapage_url: 'events' | prepend: site.baseurl | prepend: site.url }}">{{event.Name}}</a></h4>
       <p class="date"><strong>Date:</strong> {{event.Date_Local | date: "%A, %B %-d"}}</p>
       <p class="time"><strong>Time:</strong> {{event.Date_Local | date: "%I:%M %p"}}</p>
       <p class="description">
         {{event.Description}}
       </p>
-      <a href="#" class="read-more">Read More</a>
+      <a href="{{ event.Name | datapage_url: 'events' | prepend: site.baseurl | prepend: site.url }}" class="read-more">Read More</a>
     </div><!--/details-->
   </div><!--/featured-event-->
   {% endfor %}
