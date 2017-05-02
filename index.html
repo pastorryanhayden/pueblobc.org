@@ -56,14 +56,16 @@ layout: default
   {{ site.data.pastor[0].Pastor_content | markdownify }}
   <ul class="social-menu">
     {% if  site.data.pastor[0].Pastor_twitter %}
-    <li><a href="{{site.data.pastor[0].Pastor_twitter}}"><img src="http://sitesforchurch.s3.amazonaws.com/twitter.png" alt=""/></a></li>{% endif %}
+    <li><a href="http://twitter.com/{{site.data.pastor[0].Pastor_twitter}}" target="blank"><img src="http://sitesforchurch.s3.amazonaws.com/twitter.png" alt=""/></a></li>{% endif %}
     {% if  site.data.pastor[0].Pastor_facebook %}
-    <li><a href="{{ site.data.pastor[0].Pastor_facebook }}"><img src="http://sitesforchurch.s3.amazonaws.com/facebook.png" alt=""/></a></li>{% endif %}
+    <li><a href="http://facebook.com/{{ site.data.pastor[0].Pastor_facebook }}" target="blank"><img src="http://sitesforchurch.s3.amazonaws.com/facebook.png" alt=""/></a></li>{% endif %} 
     {% if  site.data.pastor[0].Pastor_email %}
-    <li><a href="{{site.data.pastor[0].Pastor_email}}"><img src="http://sitesforchurch.s3.amazonaws.com/email-1.png" alt=""/></a></li>{% endif %}
+    <li><a href="mailto://{{site.data.pastor[0].Pastor_email}}" target="blank"><img src="http://sitesforchurch.s3.amazonaws.com/email-1.png" alt=""/></a></li>{% endif %}
   </ul>   
 </div><!--/Meet-pastor-->
+{% if site.data.events[0] %}
 {% include events.html %}
+{% endif %}
 {{ site.data.contact[0].Google_Maps_Embed }}
 {% include footer.html %}
 </main>
